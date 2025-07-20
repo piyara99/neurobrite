@@ -14,7 +14,7 @@ class _LightGridGameState extends State<LightGridGame> {
   final int patternLength = 4;
   List<int> pattern = [];
   List<int> userInput = [];
-  int currentStep = 0;
+  int currentStep = -1;
   bool isShowingPattern = true;
   bool isUserTurn = false;
 
@@ -34,7 +34,7 @@ class _LightGridGameState extends State<LightGridGame> {
     setState(() {
       isShowingPattern = true;
       isUserTurn = false;
-      currentStep = 0;
+      currentStep = -1;
       userInput.clear();
     });
 
@@ -51,6 +51,7 @@ class _LightGridGameState extends State<LightGridGame> {
 
     setState(() {
       isUserTurn = true;
+      isShowingPattern = false;
     });
   }
 
@@ -101,6 +102,8 @@ class _LightGridGameState extends State<LightGridGame> {
                   setState(() {
                     userInput.clear();
                     isUserTurn = true;
+                    isShowingPattern = false;
+                    currentStep = -1;
                   });
                 },
                 child: const Text("Retry"),

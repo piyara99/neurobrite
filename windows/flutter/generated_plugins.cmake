@@ -4,9 +4,12 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   audioplayers_windows
+  cloud_firestore
+  firebase_core
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST
+  tflite_flutter
 )
 
 set(PLUGIN_BUNDLED_LIBRARIES)

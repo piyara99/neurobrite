@@ -86,7 +86,7 @@ class _FaceReadGameState extends State<FaceReadGame> {
                   child: Text(option, style: const TextStyle(fontSize: 16)),
                 ),
               );
-            }).toList(),
+            }),
             const SizedBox(height: 20),
             Text(
               feedback,

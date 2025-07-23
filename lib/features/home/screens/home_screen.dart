@@ -109,7 +109,6 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, AppRoutes.brainCircuit);
                     },
-
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.purple.shade400,
                       shape: RoundedRectangleBorder(
@@ -121,6 +120,46 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+
+            const SizedBox(height: 24),
+
+            // 😊 Emotions Button (NEW)
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: const Color(0xFFE3E6EA)),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.mood, size: 32, color: Colors.redAccent),
+                  const SizedBox(width: 12),
+                  const Expanded(
+                    child: Text(
+                      "Emotions",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, AppRoutes.emotions);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.redAccent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                    child: const Text("Go"),
+                  ),
+                ],
+              ),
+            ),
+
             const SizedBox(height: 24),
 
             // 📊 Quick Stats

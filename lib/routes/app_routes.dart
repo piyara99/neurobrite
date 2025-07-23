@@ -9,6 +9,9 @@ import '../features/games/tapzap/screens/tapzap_game.dart';
 import '../features/games/lexirush/screens/lexirush_game.dart';
 import '../features/games/pathfinder/screens/pathfinder_game.dart';
 import '../features/games/faceread/screens/faceread_game.dart';
+import '../features/settings/screens/settings_screen.dart';
+import '../features/caregiver/screens/caregiver_screen.dart';
+import '../features/ai/emotions_page.dart';
 
 class AppRoutes {
   static const String home = '/';
@@ -21,6 +24,9 @@ class AppRoutes {
   static const tracker = '/tracker';
   static const rewards = '/rewards';
   static const games = '/games';
+  static const settings = '/settings';
+  static const caregiver = '/caregiver';
+  static const emotions = '/emotions';
 
   static final routes = <String, WidgetBuilder>{
     home: (_) => const HomeScreen(),
@@ -33,5 +39,8 @@ class AppRoutes {
     tracker: (_) => const PerformanceTrackerScreen(),
     rewards: (_) => const RewardsScreen(),
     games: (_) => const GamesScreen(),
+    settings: (_) => const SettingsScreen(),
+    caregiver: (_) => const CaregiverScreen(),
+    emotions: (_) => const EmotionsPage(),
   };
 }
